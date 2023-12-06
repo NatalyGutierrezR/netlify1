@@ -1,0 +1,115 @@
+<!-- <h2 class="text-center">Componente SHOW</h2> -->
+<body>
+  <div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+  
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+      </ul>
+  
+      <div class="col-md-3 text-end">
+        <button type="button" class="btn btn-outline-primary me-2" (click)="logOut()">LogOut</button>   
+      </div>
+    </header>
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal">Welcome</h1>
+        <img class="imagen" src="../../../assets/img/6.jpeg" alt="Login">
+  <div class="d-grid gap-2 mt-4">
+      <a routerLink="/create" class="btn btn-primary" type="button">Crear</a>    
+  </div>
+  
+  <table class="table table-hover table-striped">
+      <thead class="bg-gradient text-white">
+        <tr>        
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Materia</th>
+          <th>Semestre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let post of Posts">        
+          <td>{{ post.nombre }}</td>
+          <td>{{ post.apellido }}</td>
+          <td>{{ post.materia }}</td>
+          <td>{{ post.semestre }}</td>
+          <td>          
+            <button routerLink="/edit/{{post.id}}" class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
+            <button (click)="deleteRecord(post)" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div class="div-formulario" class="titulo">
+      <h1>LABORATORIOS</h1>
+      <div class="contenedor">
+    <main>
+      <section id="about">
+        <h2>LABORATORIO 1</h2>
+        <pre>
+          <img class="imagen1" src="../../../assets/img/1-l.png" alt="IMG1">
+      </pre>
+    </section>
+  </main>
+  <main>
+  
+  <main>
+    <section id="about">
+      <h2>LABORATORIO 2</h2>
+      <pre>
+        <img class="imagen" src="../../../assets/img/2-l.png" alt="IMG2">
+         </pre>
+      </section>
+    </main>
+  
+    <main>
+      <section id="about">
+        <h2>LABORATORIO 3</h2>
+        <pre>
+          <img class="imagen" src="../../../assets/img/3-l.png" alt="IMG3">
+           </pre>
+        </section>
+      </main>
+  
+      <section id="about">
+        <h2>LABORATORIO 4</h2>
+        <pre>
+          <img class="imagen" src="../../../assets/img/4-l.png" alt="IMG4">
+           </pre>
+        </section>
+      </main>
+  
+  <main>
+      <section id="about">
+        <h2>LABORATORIO 5</h2>
+        <pre>
+          <img class="imagen" src="../../../assets/img/5-l.png" alt="IMG5">
+           </pre>
+        </section>
+      </main>
+  
+      <main>
+        <section id="about">
+          <h2>LABORATORIO 6</h2>
+          <pre>
+            <img class="imagen" src="../../../assets/img/6-l.png" alt="IMG5">
+             </pre>
+          </section>
+        </main>
+  
+        <main>
+          <section id="about">
+            <h2>LABORATORIO 7</h2>
+            <pre>
+              <img class="imagen" src="../../../assets/img/7-l.png" alt="IMG5">
+               </pre>
+            </section>
+          </main>
+    
